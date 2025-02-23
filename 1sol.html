@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1SOL 1 LIFE - Official Meme Coin</title>
+    <style>
+        :root {
+            --main-bg: #000000;
+            --accent: #00FF88;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--main-bg);
+            color: #ffffff;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .coin-name {
+            font-size: 3.5em;
+            margin: 30px 0;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .address-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 40px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .contract-address {
+            font-family: monospace;
+            font-size: 1.1em;
+            word-break: break-all;
+            margin: 15px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            padding: 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .copy-btn {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        .copy-btn:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .coin-name {
+                font-size: 2.5em;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="coin-name">1SOL 1 LIFE</h1>
+        
+        <div class="address-box">
+            <h2>Contract Address</h2>
+            <p class="contract-address" id="contractAddress">
+                2qQCRJVwKZZidvvDj6CBMio6UbDxKZ6tkYiqGCU8pump
+            </p>
+            <button onclick="copyAddress()" class="copy-btn">
+                <i class="fas fa-copy"></i> Copy Address
+            </button>
+        </div>
+
+        <div class="social-links">
+            <a href="https://youtube.com/@sajadali?si=ZUMBJrSIJTQ6xwmA" 
+               class="social-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <img src="https://img.icons8.com/color/96/000000/youtube-play.png" class="social-icon" alt="YouTube">
+                YouTube
+            </a>
+
+            <a href="https://x.com/Oumermudesir?t=GiKiNUW0QFDUSzg_kMlQlQ&s=09" 
+               class="social-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/96/000000/twitterx.png" class="social-icon" alt="Twitter/X">
+                Twitter/X
+            </a>
+
+            <a href="https://t.me/+F3Nz2rMM6JszYTA8" 
+               class="social-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <img src="https://img.icons8.com/color/96/000000/telegram-app.png" class="social-icon" alt="Telegram">
+                Telegram
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function copyAddress() {
+            const address = document.getElementById('contractAddress').innerText;
+            navigator.clipboard.writeText(address);
+            alert('Contract address copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
